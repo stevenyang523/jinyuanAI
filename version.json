@@ -1,0 +1,14 @@
+{
+  "latest_version": "2.0.0",
+  "title": "金元证券研究所AI插件 V2.0",
+  "notes": [
+    "新增 AI 智能纠错功能。",
+    "新增 AI 智能问答功能。",
+    "新增版本更新日志。",
+    "优化高 DPI 显示和启动器界面。",
+    "优化共享文件夹配置流程。",
+    "新增 PersonnelDB 自动备份功能。"
+  ],
+  "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/latest",
+  "mandatory": false
+}
