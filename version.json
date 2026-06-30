@@ -2,9 +2,9 @@
   "latest_version": "2.6",
   "title": "金元证券研究所AI插件 V2.6",
   "notes": [
-    "重磅更新报告全自动上传功能（正式版）"，
-    "全面兼容Office2016-Office2026及Office 365"，
-    "插件静默化处理，支持开机自动启动和最小化托盘"，
+    "重磅更新报告全自动上传功能（正式版）",
+    "全面兼容Office2016-Office2026及Office 365",
+    "插件静默化处理，支持开机自动启动和最小化托盘"
   ],
   "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/latest",
   "mandatory": false
