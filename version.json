@@ -6,6 +6,6 @@
     "自动适应使用者分辨率，避免因分辨率不同导致的界面显示问题",
     "新增使用帮助按钮"
   ],
-  "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/v2.8/update.zip",
+  "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/V2.8/update.zip",
   "mandatory": false
 }
