@@ -1,11 +1,11 @@
 {
-  "latest_version": "2.8",
-  "title": "金元证券研究所AI插件 V2.8",
+  "latest_version": "3.0",
+  "title": "金元证券AI插件 V3.0",
   "notes": [
-    "优化软件界面，布局更美观",
-    "软件已实现自动更新功能，无需到github上重新下载应用",
-    "该版本内核及功能已升级为2.8版本，但您下载时软件的版本号为2.7版本，仅用于测试自动升级功能用"
+    "界面整体现代化改版，配色更清爽、层次更分明",
+    "软件自动更新功能上线，无需手动从Github下载更新",
+    "修复托盘右键菜单的各项稳定性问题，软件达到正式上线标准"
   ],
-  "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/V2.8/update.zip",
+  "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/V3.0/update.zip",
   "mandatory": false
 }
