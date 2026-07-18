@@ -1,10 +1,9 @@
 {
-  "latest_version": "3.0",
+  "latest_version": "3.1",
   "title": "金元证券AI插件 V3.0",
   "notes": [
-    "界面整体现代化改版，配色更清爽、层次更分明",
-    "软件自动更新功能上线，无需手动从Github下载更新",
-    "修复托盘右键菜单的各项稳定性问题，软件达到正式上线标准"
+    "该版本仅推送给研究所测试人员孙嘉瑞测试使用，其他人员请勿下载",
+    "此版本已基本实现报告提交的自动化，除验证码输入登录外，报告附件上传、分析师、质控人员、报告类型选择、报告标题与正文全部自动化处理"
   ],
   "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/V3.0/update.zip",
   "mandatory": false
