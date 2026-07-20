@@ -1,9 +1,11 @@
 {
-  "latest_version": "3.1",
-  "title": "金元证券AI插件 V3.0",
+  "latest_version": "3.0",
+  "beta": true,
+  "title": "金元证券AI插件 V3.0 Beta1",
   "notes": [
     "该版本仅推送给研究所测试人员孙嘉瑞测试使用，其他人员请勿下载",
-    "此版本已基本实现报告提交的自动化，除验证码输入登录外，报告附件上传、分析师、质控人员、报告类型选择、报告标题与正文全部自动化处理"
+    "Beta1已基本实现报告提交的自动化，除验证码输入登录外，报告附件上传、分析师、质控人员、报告类型选择、报告标题与正文全部自动化处理",
+    "Beta1已采用全新插件引擎构建，插件结构更简洁"
   ],
   "download_url": "https://github.com/stevenyang523/jinyuanAI/releases/download/V3.0/update.zip",
   "mandatory": false
