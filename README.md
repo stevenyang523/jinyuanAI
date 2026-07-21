@@ -99,8 +99,7 @@ flowchart LR
 
 ### 📌 说明
 
-- 本项目为公司内部研报工作流工具，需配合公司 OA 系统与内网环境使用。
-- 作者：王鑫旸。
+- 本项目仅供证券公司内部投研工作使用。
 
 <div align="right"><a href="#top">⬆️ 回到顶部 / Back to top</a></div>
 
@@ -114,7 +113,7 @@ flowchart LR
 
 ### Overview
 
-**JINYUAN Securities Research AI Add-in** is a Microsoft Word–based toolkit for the equity-research report workflow. Analysts write reports in Word while the add-in provides AI assistance, analyst/rating configuration, and related-report maintenance — and can **auto-fill and submit a report to the company's OA approval workflow with one click**, eliminating repetitive copy-paste and manual data entry.
+**Jinyuan AI Plugin** is a workflow tool for research report production that operates within Microsoft Word. Designed to assist analysts while they draft reports, the plugin offers AI-powered support, manages personnel and rating configurations, and handles related report data. It also enables users to **automatically populate and submit reports to the company’s OA approval workflow with a single click**, significantly reducing repetitive copy-pasting and manual data entry.
 
 ### ✨ Features
 
@@ -176,7 +175,7 @@ flowchart LR
 
 ### 📌 Notes
 
-- This is an internal research-workflow tool intended to run against the company's OA system and intranet.
-- Author: Wang Xinyang.
+- This project is intended solely for the internal investment research activities of securities firms.
+
 
 <div align="right"><a href="#top">⬆️ Back to top</a></div>
