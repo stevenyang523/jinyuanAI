@@ -1,188 +1,182 @@
-# 金元AI 插件 使用帮助
+<div align="center">
+<a id="top"></a>
 
-> 当前版本：V3.0
->
-> 环境要求：Windows 7及以上版本， Microsoft Word 2016及以上版本 
+# 金元 AI 插件<br/>JINYUAN Research AI Add-in
 
----
+**一套面向证券研究报告工作流的 Microsoft Word AI 插件：AI 辅助写作 + 一键提交 OA 审核。**
+*A Microsoft Word add-in for the securities research workflow: AI-assisted writing + one-click submission to the OA approval system.*
 
-## 一、当前功能及新特性
+<br/>
 
-插件由三部分协同工作：**Word 任务窗格插件**（写作、AI、提交入口）、**启动器程序**（本地服务、更新、模型/模板入口、研报提交窗口）、**本地服务**（连接二者的桥梁，提供实时监听功能 ）。
+[![Version](https://img.shields.io/badge/version-V3.0-c00000?style=for-the-badge)](https://github.com/stevenyang523/jinyuanAI/releases)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#)
+[![Word](https://img.shields.io/badge/Word-2016%20~%202021%2F365-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white)](#)
 
-### Word 插件功能
+<br/>
 
-- **报告模式**：区分"公司首次覆盖报告/公司点评""行业深度/行业点评报告"，不同模式对应不同的评级项与默认报告类型。
-- **分析师、研究助理及公司/行业评级配置**：从人员库读取名单，配置评级（买入/增持/中性/减持）、评级变化（维持/首次/上调/下调）。
-- **相关报告栏目更新**：一键"更新相关报告"，也可"仅同步日期、评级及分析师名单"。
-- **保存当前报告信息**：把当前报告的关键信息暂存，便于后续提交。
-- **一键提交研报到 OA**（🧪 点击提交报告）：核心新特性，见下。
-- **AI 智能助手**：
-  - ✨ **AI 智能纠错**：对正文进行智能检查与纠错。
-  - 💬 **AI 智能问答**：围绕报告内容与研究问题问答。
-  - ⚙️ **AI API 配置**：支持"OpenAI 兼容"与"Anthropic 兼容"两种接口，兼容市面99%的模型。
+### 🌐 语言 / Language
 
+[![简体中文](https://img.shields.io/badge/-简体中文-c00000?style=for-the-badge)](#-简体中文)
+[![English](https://img.shields.io/badge/-English-555555?style=for-the-badge)](#-english)
 
+<br/>
 
-### 一键提交研报到 OA
+### ⬇️ 下载 / Download
 
-在 Word 里点"提交报告"后，启动器会自动打开 OA"新版-发布研报审核流程"提交窗口，并**自动填写**下列内容：
+[![Download Latest Release](https://img.shields.io/badge/⬇_下载最新版_·_Download-Releases-2ea44f?style=for-the-badge)](https://github.com/stevenyang523/jinyuanAI/releases/latest)
 
-- **标题、主要内容**：从 Word 报告自动读取并填入。
-- **质控审批人员、分析师**：自动选择并**提交校验**（确认真的选上了才停手，避免"填完又消失"）。
-- **报告类型**：支持全部 8 类（宏观经济/投资策略/固定收益/行业/公司/投资价值/晨报/其他证券研究报告），采用**真实鼠标点击**方式选择，兼容 OA 的下拉控件。
-- **附件**：自动读取 Word 报告**相关**附件并上传（当前仅支持 `.xls .xlsx .xlsm .doc .docx .pdf`）。
-
-
-
-### 启动器程序功能
-
-- **本地服务管理**：启动 / 停止本地服务，实时显示运行状态。
-- **首次配置**：自动检测并完成插件首次运行所需的环境配置。
-- **共享文件夹配置**：配置/复用插件所需的共享目录。
-- **报告模板**：一键打开"公司首次覆盖报告""行业点评模板"等。
-- **估值模型**：一键打开"公司估值模型（A股/港股/美股）""行业估值模型"。
-- **软件更新**：检查更新、下载（可暂停/继续）、查看更新日志。
-- **一键检测修复**：对各配置项进行检测与修复，并输出日志。
-- **开机自动启动**、系统托盘常驻、导出日志。
+</div>
 
 ---
 
+<a id="-简体中文"></a>
 
+## 🇨🇳 简体中文
 
-## 二、使用说明
+> [English version ↓](#-english) ｜ [⬇️ 前往下载页 Releases](https://github.com/stevenyang523/jinyuanAI/releases/latest)
 
+### 简介
 
+**金元 AI 插件** 是一套运行在 Microsoft Word 上的研报工作流工具。分析师在 Word 中撰写研究报告，插件提供 AI 智能辅助、人员/评级配置、相关报告维护，并能**一键把报告自动填写并提交到公司 OA 审核流程**，大幅减少重复的复制粘贴与手工录入。
 
-### （一）初次使用
+### ✨ 主要功能
 
-1. **安装运行环境**：
-  - Microsoft Word（支持加载项）。
-  - Microsoft Edge WebView2 运行时（提交窗口依赖）。
-  - Node.js（本地服务依赖）。
-2. **启动"启动器"程序**（`jinyuanai3.0.exe`）。首次运行会自动进行**首次配置**，请等待其显示"首次配置已完成"。
-3. 在启动器中确认 **本地服务** 处于"运行中"（显示"本地服务已启动，插件可正常访问"）。若未运行，点击 **▶ 启动本地服务**。
-4. 打开 **Word**，在功能区打开本插件的任务窗格（若首次未出现，见"常见问题—插件未加载"）。
-5. 在任务窗格 **⚙️ AI API 配置** 中填写并保存 AI 接口信息（选择 OpenAI 兼容或 Anthropic 兼容），保存后即可使用 AI 纠错/问答。
-6. （可选）在启动器里设置 **开机自动启动**，以后开机即自动就绪。
+**Word 任务窗格插件**
+- **报告模式**：公司首次覆盖/公司点评、行业深度/行业点评，自动匹配对应的评级项与默认报告类型。
+- **模型/数据源上传**：支持 `xls / xlsx / xlsm`。
+- **分析师与评级配置**：从人员库读取分析师、研究助理名单，配置评级（买入/增持/中性/减持）与评级变化（维持/首次/上调/下调）。
+- **相关报告维护**：一键更新相关报告，或仅同步日期、评级及分析师名单。
+- **AI 智能助手**：AI 智能纠错、AI 智能问答；AI 接口可配置，支持 **OpenAI 兼容** 与 **Anthropic 兼容** 两种协议。
 
-> 建议初次配置完整走一遍：启动器"运行中" → Word 插件正常显示 → AI 配置已保存 → 用一篇报告试跑一次提交流程。
+**一键提交研报到 OA**
+- 自动填写 OA "发布研报审核流程"表单：**标题、主要内容、质控审批人员、分析师、报告类型**。
+- **自动上传同目录附件**（`xls/xlsx/xlsm/doc/docx/pdf`）。
+- OA 环境不可访问时**自动启动 VPN**，连通后**自动打开提交窗口**，无需二次点击。
+- 提交窗口**默认最大化**、主程序退出时**自动关闭**、登录页**自动填账号密码**。
 
+**启动器程序（托盘常驻）**
+- 本地服务一键启动/停止、首次配置、共享目录配置。
+- 报告模板与估值模型快捷入口（A股/港股/美股公司模型、行业模型）。
+- 软件更新：检查/下载（可暂停续传）/更新日志，支持 **Beta 测试版通道**。
+- 一键检测修复、开机自启、导出日志。
 
+**广泛兼容**
+- 从 **Word 2016**到 **Word 2025 / Microsoft 365**一套通用**。
 
-### （二）日常使用
+### 🧩 架构
 
-**写作与 AI 辅助**
+```mermaid
+flowchart LR
+    A["Word 任务窗格插件<br/>Office.js"] <-->|localhost:3000| B["本地服务<br/>server.exe (Node/Express)"]
+    C["启动器<br/>Launcher (Python)"] -->|启动/管理| B
+    C -->|WebView2| D["OA 审核流程<br/>自动填写 + 提交"]
+    B --- E["PersonnelDB.xlsx<br/>人员库"]
+```
 
-1. 在 Word 中撰写报告，选择对应的 **报告模式**。
-2. 配置 **分析师、评级** 等信息；需要时点 **📚 更新相关报告** 或 **仅同步日期、评级及分析师名单**。
-3. 用 **✨ AI 智能纠错**、**💬 AI 智能问答** 辅助完善内容。
-4. 完成后点 **💾 保存当前报告信息**。
+- **Word 插件**：`taskpane.html / taskpane.js`，界面与交互。
+- **本地服务**：`server.exe`（前端资源内嵌），桥接插件与系统、托管任务窗格、暂存提交状态、管理人员库。
+- **启动器**：`jinyuanai.exe`，服务管理、更新、模板/模型入口、驱动 OA 自动提交窗口。
 
-**一键提交到 OA**
+### 🚀 安装与使用
 
-1. 在任务窗格"4.提交报告"里选择 **质控审批人员** 和 **报告类型**（报告类型也会按报告模式给出默认值，可改）。
-2. 点击 **🧪 点击提交报告**。
-3. 启动器会自动打开 OA 提交窗口：
-  - 若跳到**登录页**：账号密码会自动填好，**手动输入验证码**后点"登录"。
-  - 若提示 **OA 无法访问**：启动器会自动拉起 VPN（EasyConnect），**连通后自动打开**提交窗口，你无需再点一次。
-4. 进入填写页后，点击工具栏 **重新填写并上传附件**（或按提示的填写按钮）即可自动填标题、正文、质控、分析师、报告类型，并自动上传同目录附件。
-5. 核对无误后，在 OA 页面点 **开始办理 / 保存** 完成提交。
+1. 前往 **[Releases](https://github.com/stevenyang523/jinyuanAI/releases/latest)** 下载最新安装包并安装。
+2. 打开**启动器**，等待"首次配置已完成"，确认**本地服务**处于运行中。
+3. 打开 **Word**，在功能区打开插件任务窗格。
+4. 在 **AI API 配置** 中填写并保存接口信息（OpenAI 兼容 / Anthropic 兼容）。
+5. 撰写报告 → 配置分析师/评级 → 一键提交到 OA。
 
-> 附件请与 Word 报告放在**同一个文件夹**，且为 `.xls/.xlsx/.xlsm/.doc/.docx/.pdf` 之一，才会被自动识别上传。
+> 详细的初次使用、日常使用与常见问题，请参见随包附带的《使用帮助》。
 
-**打开模板 / 模型**
+### 🛠️ 从源码构建（开发者）
 
-- 在启动器点 **打开报告模板**、**打开公司/行业估值模型**，按市场（A股/港股/美股）选择即可。
+- **启动器（Python）** → 用 PyInstaller 打包为 `.exe`。
+- **本地服务（Node）** → 用 [`@yao-pkg/pkg`](https://github.com/yao-pkg/pkg) 将 `server.js` 与前端资源打包为自包含的 `server.exe`：
+  ```bash
+  npm install
+  npm install -D @yao-pkg/pkg
+  npx pkg . --targets node22-win-x64 --output dist/server.exe
+  ```
+
+### 📌 说明
+
+- 本项目为公司内部研报工作流工具，需配合公司 OA 系统与内网环境使用。
+- 作者：王鑫旸。
+
+<div align="right"><a href="#top">⬆️ 回到顶部 / Back to top</a></div>
 
 ---
 
+<a id="-english"></a>
 
+## 🇬🇧 English
 
-## 三、常见问题及解决办法
+> [中文版 ↑](#-简体中文) ｜ [⬇️ Go to Releases](https://github.com/stevenyang523/jinyuanAI/releases/latest)
 
+### Overview
 
+**JINYUAN Securities Research AI Add-in** is a Microsoft Word–based toolkit for the equity-research report workflow. Analysts write reports in Word while the add-in provides AI assistance, analyst/rating configuration, and related-report maintenance — and can **auto-fill and submit a report to the company's OA approval workflow with one click**, eliminating repetitive copy-paste and manual data entry.
 
-### 1. 提交时提示"OA 无法访问"/ 页面打不开
+### ✨ Features
 
-- 属正常保护：说明当前不在内网。启动器会自动启动 **VPN（EasyConnect）**，**连通后会自动打开**提交窗口，请耐心等待。
-- 若一直失败：手动打开 EasyConnect 确认 VPN 已连接，再重新点"提交报告"。
-- 确认 OA 地址可达（默认 `http://10.96.91.201/...`）。
+**Word Task-Pane Add-in**
+- **Report modes**: company initiation / company note, industry deep-dive / industry note — each auto-mapping the right rating options and default report category.
+- **Model / data-source upload**: `xls / xlsx / xlsm`.
+- **Analyst & rating setup**: reads analyst and assistant lists from the personnel database; configure rating (Buy / Overweight / Neutral / Underweight) and rating change (Maintain / Initiate / Upgrade / Downgrade).
+- **Related-report maintenance**: one-click update, or sync date, rating and analyst list only.
+- **AI assistant**: AI proofreading and AI Q&A; configurable AI endpoint supporting **OpenAI-compatible** and **Anthropic-compatible** protocols.
 
+**One-Click Submission to OA**
+- Auto-fills the OA "research-report publishing approval" form: **title, main body, QC approver, analyst, report category**.
+- **Auto-uploads attachments** from the report's folder (`xls/xlsx/xlsm/doc/docx/pdf`).
+- If the OA environment is unreachable, **starts the VPN automatically** and **opens the submission window once connected** — no second click needed.
+- The submission window **opens maximized**, **closes automatically** when the launcher exits, and the **login page is auto-filled**.
 
+**Launcher (system-tray resident)**
+- Start/stop the local service, first-time setup, shared-folder configuration.
+- Quick access to report templates and valuation models (A-share / HK / US company models, industry model).
+- Software updates: check / download (pause & resume) / release notes, with a **Beta channel**.
+- One-click diagnose & repair, run-at-startup, export logs.
 
-### 2. 提交窗口空白 / 打不开（缺少 WebView2 运行时）
+**Broad Compatibility**
+- One build works from **Word 2016** (IE11 engine, shipped with built-in polyfills) to **Word 2021 / Microsoft 365** (Edge WebView2 engine).
 
-- 提交窗口依赖 **Microsoft Edge WebView2 运行时**。若窗口空白或报"启动失败"，请安装 WebView2 Runtime（微软官网"Evergreen Standalone Installer"），装完重启启动器。
+### 🧩 Architecture
 
+```mermaid
+flowchart LR
+    A["Word Task-Pane<br/>Office.js"] <-->|localhost:3000| B["Local Service<br/>server.exe (Node/Express)"]
+    C["Launcher<br/>(Python)"] -->|start / manage| B
+    C -->|WebView2| D["OA Approval Flow<br/>auto-fill + submit"]
+    B --- E["PersonnelDB.xlsx"]
+```
 
+- **Word add-in**: `taskpane.html / taskpane.js` — UI and interaction.
+- **Local service**: `server.exe` (front-end assets embedded) — bridges the add-in and the system, serves the task pane, stores submission state, manages the personnel DB.
+- **Launcher**: `jinyuanai.exe` — service management, updates, template/model entries, and drives the OA auto-submission window.
 
-### 3. Word 里看不到插件 / 任务窗格未加载
+### 🚀 Install & Use
 
-- 确认启动器里 **本地服务** 为"运行中"（插件依赖 `localhost:3000`）。
-- 关闭 Word 重开；必要时在启动器点 **一键检测修复**。
-- 若仍不显示，多为加载项清单（manifest）未正确注册，运行 **首次配置** 或 **一键检测修复**。
+1. Download the latest installer from **[Releases](https://github.com/stevenyang523/jinyuanAI/releases/latest)** and install it.
+2. Open the **Launcher**, wait for "first-time setup complete", and confirm the **local service** is running.
+3. Open **Word** and launch the add-in task pane from the ribbon.
+4. In **AI API Settings**, enter and save your endpoint (OpenAI-compatible / Anthropic-compatible).
+5. Write a report → configure analyst/rating → submit to OA in one click.
 
+> For detailed first-time / daily usage and troubleshooting, see the bundled **User Guide**.
 
+### 🛠️ Build from Source (developers)
 
-### 4. 本地服务启动不了（缺少 Node.js / 端口占用）
+- **Launcher (Python)** → packaged into an `.exe` with PyInstaller.
+- **Local service (Node)** → packaged with [`@yao-pkg/pkg`](https://github.com/yao-pkg/pkg) into a self-contained `server.exe` (front-end assets embedded):
+  ```bash
+  npm install
+  npm install -D @yao-pkg/pkg
+  npx pkg . --targets node22-win-x64 --output dist/server.exe
+  ```
 
-- **缺 Node.js**：本地服务由 Node 运行，请安装 Node.js（LTS 版）后，在启动器重新 **启动本地服务**。
-- **端口 3000 被占用**：关闭占用该端口的程序，或重启电脑后再启动服务；可用 **导出日志** 查看具体报错。
+### 📌 Notes
 
+- This is an internal research-workflow tool intended to run against the company's OA system and intranet.
+- Author: Wang Xinyang.
 
-
-### 5. 分析师/评级名单是空的（人员库未就绪）
-
-- 名单来自人员库文件（PersonnelDB）。若下拉显示"等待人员库加载"，请确认该文件在插件目录/共享目录中存在且未损坏；用 **一键检测修复** 或重启本地服务后重试。
-
-
-
-### 6. AI 纠错/问答不可用（AI 接口未配置或不通）
-
-- 打开 **⚙️ AI API 配置**，确认接口类型（OpenAI 兼容 / Anthropic 兼容）、地址与密钥填写正确并已保存。
-- 确认网络能访问所配置的 AI 服务地址。
-
-
-
-### 7. 报告类型没自动选上 / 选错
-
-- 报告类型采用**真实鼠标点击**选择，自动化过程中鼠标会短暂移动去点击，**请勿在此期间移动鼠标**。
-- 若仍未选中，看工具栏状态提示，并在 OA 页面**手动选择**报告类型即可，不影响其它字段。
-
-
-
-### 8. 质控/分析师填完又消失
-
-- 本版已修复：填写后会校验是否真正选中，未选中会自动补选。若偶发未选上，按工具栏提示手动补选即可。
-
-
-
-### 9. 附件没被自动上传
-
-- 确认附件与 Word 报告在**同一文件夹**，且扩展名属于 `.xls/.xlsx/.xlsm/.doc/.docx/.pdf`。
-- 其它类型（图片、压缩包、txt 等）与临时文件（`~$` 开头）不会上传，属正常。
-
-
-
-### 10. 打开就是旧数据 / 提交窗口报错（默认网址含一次性参数）
-
-- 当前默认网址末尾带 `preLoadKey=..._<时间戳>`，可能指向某次的旧草稿。若出现打开即旧数据或报错，请联系管理员改用**不带 preLoadKey** 的创建地址：
-`http://10.96.91.201/sp/workflow/flowpage/fullCreate/1264184165837103123?workflowId=1264184165837103123&isCreate=1`
-
-
-
-### 11. 主程序关了，OA 提交窗口还留着 / 关了主程序窗口没关
-
-- 本版已处理：**关闭启动器主程序时，提交窗口会自动关闭**。若出现残留，手动关闭该窗口即可。
-
-
-
-### 12. 更新失败 / 下载中断
-
-- 在更新界面可 **暂停/继续** 下载；网络恢复后点"继续下载"。
-- 反复失败时导出日志排查，或联系管理员获取离线安装包。
-
----
-
-如遇本文未覆盖的问题，请在启动器点 **导出日志**，把日志连同问题现象反馈给管理员/开发处理。
+<div align="right"><a href="#top">⬆️ Back to top</a></div>
