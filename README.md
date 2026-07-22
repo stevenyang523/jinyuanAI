@@ -4,7 +4,7 @@
 # 金元 AI 插件<br/>JINYUAN Research AI Add-in
 
 **一套面向证券研究报告工作流的 Microsoft Word AI 插件：AI 辅助写作 + 一键提交 OA 审核。**
-*A Microsoft Word add-in for the securities research workflow: AI-assisted writing + one-click submission to the OA approval system.*
+**A Microsoft Word add-in for the securities research workflow: AI-assisted writing + one-click submission to the OA approval system.**
 
 <br/>
 
