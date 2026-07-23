@@ -9,7 +9,7 @@
 
 <br/>
 
-[![Version](https://img.shields.io/badge/version-V3.0-c00000?style=for-the-badge)](https://github.com/stevenyang523/jinyuanAI/releases)
+[![Version](https://img.shields.io/badge/version-V3.0-c00000?style=for-the-badge)](#)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#)
 [![Word](https://img.shields.io/badge/Word-2016%20~%202021%2F365-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white)](#)
 
