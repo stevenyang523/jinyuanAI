@@ -62,7 +62,7 @@
 - 一键检测修复、开机自启、导出日志。
 
 **广泛兼容**
-- 从 **Word 2016**到 **Word 2025 / Microsoft 365**一套通用**。
+- 从 **Word 2016**到 **Word 2024 / Microsoft 365**一套通用**。
 
 ### 🧩 架构
 
@@ -138,7 +138,7 @@ flowchart LR
 - One-click diagnose & repair, run-at-startup, export logs.
 
 **Broad Compatibility**
-- One build works from **Word 2016**  to **Word 2021 / Microsoft 365** .
+- One build works from **Word 2016**  to **Word 2024 / Microsoft 365** .
 
 ### 🧩 Architecture
 
